@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 : 회원가입</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script defer src="script/script.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+
+      <div id="logo">
+        <h1><a href="#">NAVER</a></h1>
+      </div>
+
+      <form id="joinFrm">
+        <label class="userInfo">
+          <h3 class="title">아이디</h3>
+          <div id="id" class="same">
+            <input type="text" id="userId" class="input" />
+            <span>@naver.com</span>
+          </div>
+          <!--div#id-->
+          <span id="reId" class="required"></span>
+        </label>
+
+        <label>
+          <h3 class="title">비밀번호</h3>
+          <div id="pw" class="same">
+            <input type="password" class="input" id="userPw"/>
+            <span>
+              <a href="#">
+                <img src="images/pw_01.png" alt="pw" />
+              </a>
+            </span>
+          </div>
+          <!--div#pw-->
+          <span class="required" id="rePw"></span>
+
+        </label>
+
+        <label>
+          <h3 class="title">비밀번호 재확인</h3>
+          <div id="pw2" class="same" class="divInput">
+            <input type="password" class="input" id="userPwChk"/>
+            <span>
+              <a href="#">
+                <img src="images/pw_02.png" alt="pw" />
+              </a>
+            </span>
+          </div>
+          <!--div#pw2-->
+          <span class="required" id="rePwChk"></span>
+
+        </label>
+
+        <label>
+          <h3 class="title">이름</h3>
+          <div id="name" class="same" class="divInput">
+            <input type="text" class="input" id="userName"/>
+          </div>
+          <!--div#name-->
+          <span class="required" id="reName"></span>
+        </label>
+
+        <label >
+          <h3 class="title">생년월일</h3>
+          <div id="bdate">
+            <span id="byear" class="birth">
+              <input id="userBirthYear" type="text" maxlength="4" placeholder="년(4자)" />
+            </span>
+
+            <span id="bmonth" class="birth">
+              <select id="month">
+              </select>
+            </span>
+
+            <span id="bday" class="birth">
+              <input id="birthDate"type="text" maxlength="2" placeholder="일" />
+            </span>
+          </div>
+          <!--div#bdate-->
+          <span id="reBirth"></span>
+        </label>
+
+        <label class="userInfo">
+          <h3 class="title">성별</h3>
+          <div id="gender" class="same">
+            <select name="gender" class="input" id="userGender">
+              <option value="0">성별</option>
+              <option value="1">남자</option>
+              <option value="2">여자</option>
+            </select>
+          </div>
+          <!--div#gender-->
+          <span id="reGender"></span>
+        </label>
+
+        <label>
+          <h3 class="title" id="chkEmail">본인 확인 이메일</h3>
+          <div id="email" class="same">
+            <input id="userEmail" type="text" placeholder="선택입력" class="input" />
+          </div>
+          <!--div#email-->
+          <span id="reEmail"></span>
+        </label>
+
+        <label>
+        <h3 class="title">휴대전화</h3>
+        <div id="joinlow">
+          <span id="selectNum" class="userNum">
+            <select name="number">
+              <option value="">대한민국 +82</option>
+              <option value="">네팔</option>
+              <option value="">노르웨이</option>
+              <option value="">덴마크</option>
+              <option value="">미국</option>
+            </select>
+          </span>
+          <div id="userNum" class="userNum">
+            <input id="userNumber" type="text" maxlength="16" placeholder="전화번호 입력" />
+          </div>
+          <span id="button">
+            <input type="button" value="인증번호 받기" />
+          </span>
+          <div class="same" id="numCheck">
+            <input
+              type="text"
+              placeholder="인증번호 입력하세요"
+              class="input" disabled
+            />
+            
+          </div>
+          <span id="reNumber"class="required"></span>
+
+				</label>
+        </div>
+        <!--div#joinRow-->
+        <div id="submit">
+          <input type="button" value="가입하기" onclick="fnJoin()"/>
+        </div>
+      </form>
+
+      <footer>
+        <span>
+          <a href="#">이용약관</a>
+        </span>
+        |
+        <span>
+          <a href="#">개인정보처리방침</a>
+        </span>
+        |
+        <span>
+          <a href="#">책임의 한계와 법적고지</a>
+        </span>
+        |
+        <span>
+          <a href="#">회원정보 고객센터</a>
+        </span>
+
+        <p>
+          <span id="logoLow"> NAVER </span>
+          Copyright
+          <span>NAVER Corp.</span>
+          All Rights Reserved.
+        </p>
+      </footer>
+    </div>
+    <!--div#wrap-->
+  </body>
+</html>
