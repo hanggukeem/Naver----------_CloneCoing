@@ -163,7 +163,8 @@ function vailableChk_number() {
   }
 }
 // 가입하기
-function fnJoin() {
+
+function vailableChk() {
   vailableChk_id();
   vailableChk_pw();
   vailableChk_pwChk();
@@ -172,18 +173,12 @@ function fnJoin() {
   vailableChk_Gender();
   vailableChk_Email();
   vailableChk_number();
+}
 
+function fnJoin() {
+  vailableChk();
   let joinFrm = document.getElementById("joinFrm");
-  if (
-    vailableChk_id() == true &&
-    vailableChk_pw() == true &&
-    vailableChk_pwChk() == true &&
-    vailableChk_Name() == true &&
-    vailableChk_Birth() == true &&
-    vailableChk_Gender() == true &&
-    vailableChk_Email() == true &&
-    vailableChk_number() == true
-  ) {
+  if (vailableChk == true) {
     joinFrm.action = "https://www.naver.com";
     joinFrm.submit();
   }
